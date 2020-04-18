@@ -6,3 +6,4 @@ def wsgi_application(environ, start_response):
 	body = "Hello, world!"
 	start_response(status, headers)
 	return [ body ]
+"\n".join(environ.get('QUERY_STRING').split("&"))
